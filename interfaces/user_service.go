@@ -11,6 +11,7 @@ import (
 type UserService interface {
 	// Register validates the request, hashes the password, and creates the user
 	Register(ctx context.Context, req *model.RegisterRequest) (*model.AuthResponse, error)
+	//checkEmail(ctx context.Context, req *model.User) (*model.RegisterRequest, error)
 
 	// Login authenticates credentials and returns a signed JWT
 	Login(ctx context.Context, req *model.LoginRequest) (*model.AuthResponse, error)
